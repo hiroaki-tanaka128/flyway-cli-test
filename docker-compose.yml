@@ -13,7 +13,7 @@ services:
   test-flyway-cli:
     image: flyway/flyway
     container_name: test-flyway-cli
-    command: -url=jdbc:mysql://test-db:3306/test_db -schemas=myschema -user=root -password=password -connectRetries=60 migrate
+    command: -url=jdbc:mysql://test-db:3306/test_db -schemas=test_db -user=root -password=password -connectRetries=60 migrate
     volumes:
       - ./migrate/sql:/flyway/sql
     links:
