@@ -8,6 +8,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
+      - test-db-volume:/var/lib/mysql
       - ./db/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d
 
   test-flyway-cli:
